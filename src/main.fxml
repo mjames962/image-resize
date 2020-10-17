@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="846.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <center>
+      <Pane prefHeight="674.0" prefWidth="845.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="view_Z" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <viewport>
+                  <Rectangle2D />
+               </viewport></ImageView>
+            <ImageView fx:id="view_Y" layoutX="296.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="view_X" layoutX="577.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+            <Slider fx:id="slice_Z" layoutX="65.0" layoutY="270.0" max="112.0" />
+            <Slider fx:id="scale_Z" blockIncrement="0.1" layoutX="65.0" layoutY="293.0" max="1.7" min="0.5" value="1.0" />
+            <Slider fx:id="slice_Y" layoutX="349.0" layoutY="270.0" max="255.0" />
+            <Slider fx:id="scale_Y" blockIncrement="0.1" layoutX="349.0" layoutY="293.0" max="1.7" min="0.5" value="1.0" />
+            <Button fx:id="button_MIP" layoutX="375.0" layoutY="396.0" mnemonicParsing="false" text="MIP" />
+            <Button fx:id="button_Reset" layoutX="424.0" layoutY="396.0" mnemonicParsing="false" text="Reset" />
+            <Slider fx:id="slice_X" layoutX="648.0" layoutY="270.0" max="255.0" />
+            <Slider fx:id="scale_X" blockIncrement="0.1" layoutX="648.0" layoutY="293.0" max="5.0" min="0.5" value="1.0" />
+            <Button fx:id="button_ThumbZ" layoutX="85.0" layoutY="324.0" mnemonicParsing="false" text="Thumbnail View" />
+            <Button fx:id="button_ThumbY" layoutX="369.0" layoutY="324.0" mnemonicParsing="false" text="Thumbnail View" />
+            <Button fx:id="button_ThumbX" layoutX="668.0" layoutY="324.0" mnemonicParsing="false" text="Thumbnail View" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
