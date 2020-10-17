@@ -91,9 +91,7 @@ public class Controller {
         max = Short.MIN_VALUE; // set to extreme values
         short read; // value read in
         int b1;
-        int b2; // data is wrong Endian (check wikipedia) for Java so we need to
-        // swap the bytes
-        // around
+        int b2; // data is wrong Endian for Java
 
         cthead = new short[113][256][256];
 
@@ -107,11 +105,8 @@ public class Controller {
                     b1 = ((int) in.readByte()) & 0xff; // the 0xff is because
                     // Java does not have
                     // unsigned types
-                    b2 = ((int) in.readByte()) & 0xff; // the 0xff is because
-                    // Java does not have
-                    // unsigned types
-                    read = (short) ((b2 << 8) | b1); // and swizzle the bytes
-                    // around
+                    b2 = ((int) in.readByte()) & 0xff;
+                    read = (short) ((b2 << 8) | b1);
                     if (read < min)
                         min = read;
                     if (read > max)

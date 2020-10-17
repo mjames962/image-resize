@@ -5,6 +5,9 @@ import javafx.scene.layout.GridPane;
 
 import java.io.IOException;
 
+/**
+ * Class to support opening the thumbnails window.
+ */
 public class Thumbnails {
 
    @FXML
@@ -14,7 +17,12 @@ public class Thumbnails {
 
    public static WritableImage[] thumbnails;
 
-    @FXML
+    /**
+     * Puts all thumbnails on screen when page is opened.
+     *
+     * @throws IOException
+     */
+   @FXML
     private void initialize() throws IOException {
         int col = 1;
         int row = 0;
